@@ -1,3 +1,4 @@
+var key = config.MY_KEY;
 function consultaCEP(){
     var cep = document.getElementById("CEP").value;
     var url = "https://viacep.com.br/ws/"+ cep + "/json/";
@@ -12,8 +13,8 @@ function consultaCEP(){
             $("#bairro").html(response.bairro);
             $("#titleCEP").html("CEP  " + response.cep);
             $(".cep").show();
-          
-
+            var pointCEP="https://www.google.com/maps/embed/v1/place?q="+response.cep+"&key="+key;
+            $("#map").attr("src",pointCEP);
             /*document.getElementById("logradouro").innerHTML = response.logradouro;
             document.getElementById("bairro").innerHTML = response.bairro;
             document.getElementById("localidade").innerHTML = response.localidade;
