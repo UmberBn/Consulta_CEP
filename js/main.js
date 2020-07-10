@@ -1,4 +1,4 @@
-var key = config.MY_KEY;
+
 function consultaCEP(){
     var cep = document.getElementById("CEP").value;
     var url = "https://viacep.com.br/ws/"+ cep + "/json/";
@@ -6,7 +6,7 @@ function consultaCEP(){
         url:url,
         type: "GET",
         success: function(response){
-            console.log(response);
+            var key = config.MY_KEY;
             $("#logradouro").html(response.logradouro);
             $("#uf").html(response.uf);
             $("#localidade").html(response.localidade);
