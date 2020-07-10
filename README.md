@@ -1,2 +1,2 @@
-# Um Website que retorna as informações de um CEP
-a website that returns the zip code entered by the user, created using bootstrap / Jquery.
+# Site to view zip code data
+a website that returns the zip code through a table, the zip code is entered by the user, created using boostrap / Jquery.
